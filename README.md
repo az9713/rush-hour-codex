@@ -12,12 +12,16 @@ Select an automobile and move it with the brass arrow controls or your keyboard.
 
 ## Features
 
-- Three playable puzzles with verified solutions
+- Four playable, era-linked puzzles spanning the 1940s through the 1970s
 - Classic American automobile artwork
 - Mouse, touch, keyboard, and on-screen movement controls
 - Undo, restart, sound, move counter, and locally saved best scores
 - Responsive desktop and mobile layouts
-- Four era-inspired color treatments: 1940s, 1950s, 1960s, and 1970s
+- Era selection loads the matching puzzle and visual treatment
+
+## Development journey
+
+Read [DEVELOPMENT_JOURNEY.md](DEVELOPMENT_JOURNEY.md) for the complete build, browser-testing, publishing, debugging, and deployment history.
 
 ## Local development
 
