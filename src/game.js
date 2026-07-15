@@ -48,6 +48,17 @@ export const LEVELS = [
       B: { sprite: 6, name: 'Navy Muscle Coupe' },
       F: { sprite: 10, name: 'Olive Grand Tourer' }
     })
+  },
+  {
+    id: 4,
+    title: 'Victory Boulevard',
+    era: '40s',
+    subtitle: 'Homeward traffic fills the boulevard.',
+    par: 6,
+    pieces: cloneWithSprites(9, {
+      B: { sprite: 10, name: 'Ivory Streamliner' },
+      H: { sprite: 5, name: 'Blackout Sedan' }
+    })
   }
 ];
 

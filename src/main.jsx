@@ -145,7 +145,7 @@ function App() {
   const [selectedId, setSelectedId] = useState('R');
   const [sound, setSound] = useState(true);
   const [won, setWon] = useState(false);
-  const [era, setEra] = useState(level.era);
+  const era = level.era;
   const [best, setBest] = useState(() => Number(localStorage.getItem(`rush-hour-best-${level.id}`)) || '—');
 
   const playTone = (frequency = 170, duration = 0.07) => {
@@ -172,7 +172,6 @@ function App() {
     setHistory([]);
     setWon(false);
     setSelectedId('R');
-    setEra(next.era);
     setBest(Number(localStorage.getItem(`rush-hour-best-${next.id}`)) || '—');
   };
 
@@ -225,6 +224,11 @@ function App() {
 
   const restart = () => loadLevel(levelIndex);
 
+  const selectEra = (nextEra) => {
+    const nextLevelIndex = LEVELS.findIndex((item) => item.era === nextEra);
+    if (nextLevelIndex >= 0) loadLevel(nextLevelIndex);
+  };
+
   const moveSelected = (direction) => {
     if (won) return;
     const selected = pieces.find((piece) => piece.id === selectedId);
@@ -263,7 +267,7 @@ function App() {
         <aside className="era-panel" aria-label="Choose a motoring era">
           <h3>Pick Your Era</h3>
           {ERAS.map((item, index) => (
-            <button key={item} type="button" className={era === item ? 'is-active' : ''} onClick={() => setEra(item)}>
+            <button key={item} type="button" className={era === item ? 'is-active' : ''} aria-pressed={era === item} onClick={() => selectEra(item)}>
               <span>{item}</span><i className={`era-car era-car--${index}`} aria-hidden="true" />
             </button>
           ))}
