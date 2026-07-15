@@ -3,3 +3,5 @@ dist/
 .vite/
 *.log
 .DS_Store
+README.txt
+README_test.txt

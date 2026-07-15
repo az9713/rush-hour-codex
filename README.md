@@ -2,6 +2,14 @@
 
 A playable browser remake of the classic sliding-block puzzle, styled as a nostalgic American roadside garage spanning the 1940s through the 1970s.
 
+## Built entirely in ChatGPT Codex
+
+The complete application—concept, generated artwork, implementation, debugging, testing, documentation, GitHub publishing, and deployment—was produced end to end within ChatGPT Codex.
+
+- **Build Web Apps** was invoked in the original prompt and used to create the playable React experience.
+- **The in-app Browser** provided the live game preview and annotation workflow. It was used to identify that the vertical Woodside Wagon was half hidden and not centered, then verify the repair.
+- **Sites** packaged and deployed the finished game at the published URL below.
+
 ## Play
 
 **[Play Rush Hour — American Classics](https://rush-hour-american-classics.az9713.chatgpt.site)**
